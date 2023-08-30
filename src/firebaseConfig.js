@@ -17,5 +17,5 @@ var firebaseConfig = {
  // Database Authentication to allow data to be saved
  
    firebase.auth().signInWithEmailAndPassword(process.env.REACT_APP_Email, process.env.REACT_APP_Password);
-console.log('.env variable is ' + process.env.REACT_APP_Email);
+
    export default firebase;

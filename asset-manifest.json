@@ -1,14 +1,14 @@
 {
   "files": {
     "main.css": "./static/css/main.f6938c2b.chunk.css",
-    "main.js": "./static/js/main.3770d830.chunk.js",
-    "main.js.map": "./static/js/main.3770d830.chunk.js.map",
+    "main.js": "./static/js/main.bf116abb.chunk.js",
+    "main.js.map": "./static/js/main.bf116abb.chunk.js.map",
     "runtime-main.js": "./static/js/runtime-main.f1c4a8af.js",
     "runtime-main.js.map": "./static/js/runtime-main.f1c4a8af.js.map",
-    "static/js/2.d72a288a.chunk.js": "./static/js/2.d72a288a.chunk.js",
-    "static/js/2.d72a288a.chunk.js.map": "./static/js/2.d72a288a.chunk.js.map",
+    "static/js/2.3f8fc494.chunk.js": "./static/js/2.3f8fc494.chunk.js",
+    "static/js/2.3f8fc494.chunk.js.map": "./static/js/2.3f8fc494.chunk.js.map",
     "index.html": "./index.html",
-    "precache-manifest.8bcb6c295b5a6e839cf2f3c8391f09fd.js": "./precache-manifest.8bcb6c295b5a6e839cf2f3c8391f09fd.js",
+    "precache-manifest.43e3b24fda992f7a77eb3f3569d3c3b9.js": "./precache-manifest.43e3b24fda992f7a77eb3f3569d3c3b9.js",
     "service-worker.js": "./service-worker.js",
     "static/css/main.f6938c2b.chunk.css.map": "./static/css/main.f6938c2b.chunk.css.map",
     "static/media/Andrew-Alkazeer-Resume.pdf": "./static/media/Andrew-Alkazeer-Resume.6db7fc0d.pdf",
@@ -46,8 +46,8 @@
   },
   "entrypoints": [
     "static/js/runtime-main.f1c4a8af.js",
-    "static/js/2.d72a288a.chunk.js",
+    "static/js/2.3f8fc494.chunk.js",
     "static/css/main.f6938c2b.chunk.css",
-    "static/js/main.3770d830.chunk.js"
+    "static/js/main.bf116abb.chunk.js"
   ]
 }

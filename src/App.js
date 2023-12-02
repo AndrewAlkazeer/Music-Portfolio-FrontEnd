@@ -60,7 +60,7 @@ export class App extends Component {
 
   UNSAFE_componentWillMount = () =>{
      // Not Saving new users Starts Here
-     /*
+     
     axios.get('https://api.ipdata.co/?api-key=5c0acf227e6bb4bb352a10d2a5911e171d9d4553ed4b0bd8aeda4d93').then(i =>{
     this.setState({ipInfo: i.data});
 
@@ -126,7 +126,7 @@ export class App extends Component {
         //  console.log('Error!');
         //  console.log(err);
         }
-  */
+
        //Retraiving the data from Firebase database
      axios.get('https://my-awesome-project-fc911.firebaseio.com/vistorByCountry.json').then(dd =>{
        //this.setState({firebaseDB: dd.data});
@@ -146,7 +146,7 @@ export class App extends Component {
        }
     })
     // Not Saving new users Ends Here
-  //})
+  })
   }
   
   componentDidMount = () => {

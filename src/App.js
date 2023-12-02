@@ -50,13 +50,17 @@ export class App extends Component {
       ipInfo: [],
       firebaseDB: [],
       result: [],
-      autoDateUpdate: new Date().getFullYear()
+      autoDateUpdate: new Date().getFullYear(),
+      phone: "N/A"
     })
+
+    this.handleSubmit = this.handleSubmit.bind(this);
+    this.handleChange = this.handleChange.bind(this);
   }
 
   UNSAFE_componentWillMount = () =>{
      // Not Saving new users Starts Here
-     
+     /*
     axios.get('https://api.ipdata.co/?api-key=5c0acf227e6bb4bb352a10d2a5911e171d9d4553ed4b0bd8aeda4d93').then(i =>{
     this.setState({ipInfo: i.data});
 
@@ -122,7 +126,7 @@ export class App extends Component {
         //  console.log('Error!');
         //  console.log(err);
         }
-  
+  */
        //Retraiving the data from Firebase database
      axios.get('https://my-awesome-project-fc911.firebaseio.com/vistorByCountry.json').then(dd =>{
        //this.setState({firebaseDB: dd.data});
@@ -142,7 +146,7 @@ export class App extends Component {
        }
     })
     // Not Saving new users Ends Here
-  })
+  //})
   }
   
   componentDidMount = () => {
@@ -174,6 +178,27 @@ axios.get('https://my-awesome-project-fc911.firebaseio.com/vistorByCountry.json'
 
 })
 */
+  }
+  // Handling Submission for Contact Form
+  handleSubmit(e) {
+    e.preventDefault();
+    
+    // const [name, email, phone, message] = this.state;
+    const contact = {
+      Name: this.state.name,
+      Email: this.state.email,
+      Phone: this.state.phone,
+      Message: this.state.message
+    }
+    
+    alert("Your Message Has Been Sent Successfully!");
+    var database = firebase.database(); // Will be removed later
+    var ref2 = database.ref('Contacts/');
+    ref2.push(contact);
+  }
+ // Saving form data to a state
+  handleChange(event) {
+    this.setState({[event.target.name]: event.target.value});
   }
 
   render() {
@@ -376,16 +401,16 @@ axios.get('https://my-awesome-project-fc911.firebaseio.com/vistorByCountry.json'
 <div className="col-lg-4 contact"><i className="fas fa-map-marker-alt"></i><h4>LOCATION</h4><h5>I can commute for up to 20 miles or work remotely.</h5><p color-theme="red">Westminster, CO</p></div>
 </div>
 <div className="row">
-<form action="/submit" method="POST">
+<form onSubmit={this.handleSubmit}>
 <div className="col-lg-6">
-<input type="text" name="name" placeholder="First Name*:" required />
-<input type="email" name="email" placeholder="Your email*:" required />
-<input type="tel" name="phone" pattern="[0-9]{3}-[0-9]{3}-[0-9]{4}" placeholder="Your Phone No:" />
+<input type="text" name="name" placeholder="First Name*:" onChange = {this.handleChange} required />
+<input type="email" name="email" placeholder="Your email*:" onChange = {this.handleChange} required />
+<input type="tel" name="phone" pattern="[0-9]{3}-[0-9]{3}-[0-9]{4}" placeholder="Your Phone No:" onChange = {this.handleChange} />
 <small>Format: 123-456-7890</small>
 </div>
 <div className="col-lg-6 contact">
-<textarea type="text" name="message" placeholder="Your Message*:" required />
-<button bg-color-theme="red">Send Message</button>
+<textarea type="text" name="message" placeholder="Your Message*:" onChange = {this.handleChange} required />
+<button bg-color-theme="red" type='submit'>Send Message</button>
 </div>
 </form>
 </div>

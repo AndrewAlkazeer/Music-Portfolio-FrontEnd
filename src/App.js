@@ -17,10 +17,22 @@ import Hero from './images/hero.png';
 import PortfolioImage from './images/Portfolio-image2.png';
 import profileImg from './images/Resume Photo.png';
 import Resume from './images/Andrew-Alkazeer-Resume.pdf';
+import project1 from './images/Full-screenshot/App-Reviews-modified.png';
+import project2 from './images/Full-screenshot/Personal-Portfolio-modified.png';
+import project3 from './images/Full-screenshot/Car-Insurance-modified.png';
+import project4 from './images/Full-screenshot/Book-A-Flight-modified.png';
+import project5 from './images/Full-screenshot/Marketing-Platform-modified.png';
+import project6 from './images/Full-screenshot/My-Previous-portfolio.png';
+import project7 from './images/Full-screenshot/admin-dashboard.png';
+import project8 from './images/Full-screenshot/Login-page.png';
+import project9 from './images/Full-screenshot/image-effects.png';
+import project10 from './images/Full-screenshot/Clips.png';
+import firebase from './firebaseConfig';
+//import { Db } from 'mongodb';
 
 // Redirect to Resume PDF if on resume.andrewalkazeer.dev
 if (window.location.hostname === "resume.andrewalkazeer.dev") {
-  window.location.replace(Resume);
+  window.open(Resume + "#view=Fit");
 }
 /*
 import project1 from './images/01_Screenshot (2).jpg';
@@ -32,20 +44,6 @@ import project6 from './images/Book a Flight.png';
 import project7 from './images/Car Insurance.png';
 import project8 from './images/App Reviews.png';
 */
-
-import project1 from './images/Full-screenshot/App-Reviews-modified.png';
-import project2 from './images/Full-screenshot/Personal-Portfolio-modified.png';
-import project3 from './images/Full-screenshot/Car-Insurance-modified.png';
-import project4 from './images/Full-screenshot/Book-A-Flight-modified.png';
-import project5 from './images/Full-screenshot/Marketing-Platform-modified.png';
-import project6 from './images/Full-screenshot/My-Previous-portfolio.png';
-import project7 from './images/Full-screenshot/admin-dashboard.png';
-import project8 from './images/Full-screenshot/Login-page.png';
-import project9 from './images/Full-screenshot/image-effects.png';
-import project10 from './images/Full-screenshot/Clips.png';
-
-import firebase from './firebaseConfig';
-//import { Db } from 'mongodb';
 
 export class App extends Component {
   constructor(props) {

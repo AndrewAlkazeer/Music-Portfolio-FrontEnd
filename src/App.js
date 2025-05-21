@@ -1,3 +1,5 @@
+// NOT CHANGE JUST A COMMENT
+
 // import logo from './logo.svg';
 import './App.css';
 import './mobile.css';
@@ -15,17 +17,6 @@ import Hero from './images/hero.png';
 import PortfolioImage from './images/Portfolio-image2.png';
 import profileImg from './images/Resume Photo.png';
 import Resume from './images/Andrew-Alkazeer-Resume.pdf';
-/*
-import project1 from './images/01_Screenshot (2).jpg';
-import project2 from './images/login with register backend.png';
-import project3 from './images/Angular-App.png';
-import project4 from './images/Login Screen.jpg';
-import project5 from './images/Marketing Platform.jpg';
-import project6 from './images/Book a Flight.png';
-import project7 from './images/Car Insurance.png';
-import project8 from './images/App Reviews.png';
-*/
-
 import project1 from './images/Full-screenshot/App-Reviews-modified.png';
 import project2 from './images/Full-screenshot/Personal-Portfolio-modified.png';
 import project3 from './images/Full-screenshot/Car-Insurance-modified.png';
@@ -36,9 +27,23 @@ import project7 from './images/Full-screenshot/admin-dashboard.png';
 import project8 from './images/Full-screenshot/Login-page.png';
 import project9 from './images/Full-screenshot/image-effects.png';
 import project10 from './images/Full-screenshot/Clips.png';
-
 import firebase from './firebaseConfig';
 //import { Db } from 'mongodb';
+
+// Redirect to Resume PDF if on https://music-portfolio-develop.onrender.com/resume
+if (window.location.href === "https://music-portfolio-develop.onrender.com/resume") {
+  window.location.href = Resume;
+}
+/*
+import project1 from './images/01_Screenshot (2).jpg';
+import project2 from './images/login with register backend.png';
+import project3 from './images/Angular-App.png';
+import project4 from './images/Login Screen.jpg';
+import project5 from './images/Marketing Platform.jpg';
+import project6 from './images/Book a Flight.png';
+import project7 from './images/Car Insurance.png';
+import project8 from './images/App Reviews.png';
+*/
 
 export class App extends Component {
   constructor(props) {
@@ -60,7 +65,7 @@ export class App extends Component {
 
   UNSAFE_componentWillMount = () =>{
      // Not Saving new users Starts Here
-     /*
+     
     axios.get('https://api.ipdata.co/?api-key=5c0acf227e6bb4bb352a10d2a5911e171d9d4553ed4b0bd8aeda4d93').then(i =>{
     this.setState({ipInfo: i.data});
 
@@ -126,7 +131,7 @@ export class App extends Component {
         //  console.log('Error!');
         //  console.log(err);
         }
-  */
+
        //Retraiving the data from Firebase database
      axios.get('https://my-awesome-project-fc911.firebaseio.com/vistorByCountry.json').then(dd =>{
        //this.setState({firebaseDB: dd.data});
@@ -146,7 +151,7 @@ export class App extends Component {
        }
     })
     // Not Saving new users Ends Here
-  //})
+  })
   }
   
   componentDidMount = () => {

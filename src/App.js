@@ -17,6 +17,11 @@ import Hero from './images/hero.png';
 import PortfolioImage from './images/Portfolio-image2.png';
 import profileImg from './images/Resume Photo.png';
 import Resume from './images/Andrew-Alkazeer-Resume.pdf';
+
+// Redirect to Resume PDF if on resume.andrewalkazeer.dev
+if (window.location.hostname === "resume.andrewalkazeer.dev") {
+  window.location.replace(Resume);
+}
 /*
 import project1 from './images/01_Screenshot (2).jpg';
 import project2 from './images/login with register backend.png';

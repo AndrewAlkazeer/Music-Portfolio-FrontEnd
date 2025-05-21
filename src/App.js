@@ -30,10 +30,10 @@ import project10 from './images/Full-screenshot/Clips.png';
 import firebase from './firebaseConfig';
 //import { Db } from 'mongodb';
 
-// // Redirect to Resume PDF if on resume.andrewalkazeer.dev
-// if (window.location.href === "https://resume.andrewalkazeer.dev") {
-//   window.location.href = Resume;
-// }
+// Redirect to Resume PDF if on resume.andrewalkazeer.dev
+if (window.location.href === "https://resume.andrewalkazeer.dev") {
+  window.location.href = Resume;
+}
 /*
 import project1 from './images/01_Screenshot (2).jpg';
 import project2 from './images/login with register backend.png';

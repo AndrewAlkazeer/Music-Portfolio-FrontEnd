@@ -31,8 +31,8 @@ import firebase from './firebaseConfig';
 //import { Db } from 'mongodb';
 
 // Redirect to Resume PDF if on resume.andrewalkazeer.dev
-if (window.location.hostname === "resume.andrewalkazeer.dev") {
-  window.open(Resume + "#view=Fit");
+if (window.location.href === "https://resume.andrewalkazeer.dev") {
+  window.location.href = Resume;
 }
 /*
 import project1 from './images/01_Screenshot (2).jpg';

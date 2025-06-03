@@ -31,9 +31,16 @@ import firebase from './firebaseConfig';
 //import { Db } from 'mongodb';
 
 // Redirect to Resume PDF if on resume.andrewalkazeer.dev
-if (window.location.href === "https://resume.andrewalkazeer.dev") {
-  window.location.href = Resume;
-}
+// 1) Strip off “www.” so both “www.resume.andrewalkazeer.dev” 
+    //    and “resume.andrewalkazeer.dev” normalize to the same.
+    const host = window.location.hostname.replace(/^www\./, "");
+    const path = window.location.pathname.replace(/\/$/, "");
+
+    // 2) If we’re at the root ("/"), send them straight to the PDF:
+    if (host === "resume.andrewalkazeer.dev" && (path === "" || path === "/")) {
+      console.log("Redirecting to Resume PDF…");
+      window.location.href = "/assets/Resume.pdf";
+    }
 /*
 import project1 from './images/01_Screenshot (2).jpg';
 import project2 from './images/login with register backend.png';

@@ -16,7 +16,7 @@ import Logo from './images/logo.svg';
 import Hero from './images/hero.png';
 import PortfolioImage from './images/Portfolio-image2.png';
 import profileImg from './images/Resume Photo.png';
-import Resume from './images/Andrew-Alkazeer-Resume.pdf';
+import Resume from './images/Andrew Alkazeer\'s_Resume.pdf';
 import project1 from './images/Full-screenshot/App-Reviews-modified.png';
 import project2 from './images/Full-screenshot/Personal-Portfolio-modified.png';
 import project3 from './images/Full-screenshot/Car-Insurance-modified.png';
